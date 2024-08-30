@@ -1,1 +1,9 @@
-hello world
+name: Push events
+on: push
+jobs:
+  show-info:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Info
+        run:
+         echo "this is oush event"
