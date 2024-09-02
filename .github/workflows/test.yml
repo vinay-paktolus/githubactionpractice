@@ -1,12 +1,17 @@
 name: Manual Workflows
 on: 
-  issues:
-    types:
-      - opened
+  workflow_dispatch:
+    inputs:
+      param1:
+        description: 'Description for param1'
+        required: true
+        default: 'hello world'
 jobs:
-  show-info:
+  run-manual-tasks:
       runs-on: ubuntu-latest
       steps:
-      - name: Info
-        run:
-         echo "issue workflow"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Run Manual Task
+        run: |
+         echo "Running manual task with param1: ${{ github.event.inputs.param1 }}"
