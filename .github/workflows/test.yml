@@ -1,9 +1,7 @@
 name: Push Events
 on: 
-  push:
-    branches:
-      - main
-      - test
+ schedule:
+   - cron: '*/2 * * * *' #every 5 minute
 jobs:
   show-info:
       runs-on: ubuntu-latest
