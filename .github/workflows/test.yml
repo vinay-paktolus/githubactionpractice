@@ -10,4 +10,4 @@ jobs:
       steps:
       - name: Info
         run:
-         echo "this is oush event"
+         echo "this is push event"
