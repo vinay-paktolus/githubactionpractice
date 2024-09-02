@@ -1,12 +1,12 @@
 name: Manual Workflows
 on: 
- workflow_dispatch:
+  issues:
+    types:
+      - opened
 jobs:
- run-manual-tasks:
-     runs-on: ubuntu-latest
-     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+  show-info:
+      runs-on: ubuntu-latest
+      steps:
       - name: Info
         run:
-         echo "Running manual tasks"
+         echo "issue workflow"
