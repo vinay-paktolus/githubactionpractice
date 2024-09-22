@@ -6,7 +6,7 @@ on:
 
 jobs:
   push-to-ghcr:
-    runs-on: certification
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
